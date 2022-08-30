@@ -5,6 +5,7 @@ interface DinosaurData {
 	legs: number;
 }
 
+// const data: Array<DinosaurData> = [
 const data: DinosaurData[] = [
 	{
 		dinosaur: 'Triceratops',
@@ -23,3 +24,12 @@ function printDinos(dinos: DinosaurData[]): void {
 		console.log(dino.dinosaur)
 	})
 }
+
+
+interface Safe<T> {
+	code: number;
+	data: T;
+}
+
+let safeNumber: Safe<number> = { data: 42, code: 123 }
+let safeString: Safe<string> = { data: 'hello', code: 321 }
