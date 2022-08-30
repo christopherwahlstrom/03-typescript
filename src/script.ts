@@ -16,6 +16,10 @@ const data: DinosaurData[] = [
 	}
 ]
 
-data.forEach(dino => {
-	console.log(dino.dinosaur)
-})
+printDinos(data)
+
+function printDinos(dinos: DinosaurData[]): void {
+	dinos.forEach(dino => {
+		console.log(dino.dinosaur)
+	})
+}
